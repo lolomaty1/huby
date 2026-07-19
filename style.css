@@ -222,33 +222,17 @@ button { cursor: pointer; border: none; font-family: inherit; }
 /* Hero visual — brand image */
 .heroi__visual {
   position: relative;
-  border-radius: 20px;
-  transform: rotate(1deg);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
   overflow: hidden;
 }
 .heroi__visual img {
-  border-radius: 20px;
+  border-radius: 16px;
   width: 100%; height: auto;
   display: block;
 }
-.heroi__visual::before {
-  content: ''; position: absolute;
-  top: -20px; left: -20px;
-  width: 80px; height: 80px;
-  border: 4px solid var(--amarelo);
-  border-radius: 50%;
-  opacity: 0.4;
-}
-.heroi__visual::after {
-  content: ''; position: absolute;
-  bottom: -16px; right: -16px;
-  width: 60px; height: 60px;
-  background: var(--amarelo);
-  border-radius: 12px;
-  opacity: 0.2;
-  transform: rotate(15deg);
-}
+.heroi__visual::before { display: none; }
+.heroi__visual::after { display: none; }
 
 /* ===========================================
    FAIXA DE BENEFÍCIOS — horizontal ribbon
@@ -294,15 +278,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   background: var(--cinza-claro);
   position: relative;
 }
-.sobre::before {
-  content: 'HUBY';
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  font-family: var(--font-titulo);
-  font-size: clamp(8rem, 18vw, 16rem);
-  color: rgba(0,59,203,0.03);
-  pointer-events: none; white-space: nowrap;
-}
+.sobre::before { display: none; }
 .sobre .wrap {
   display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
 }
@@ -394,11 +370,11 @@ button { cursor: pointer; border: none; font-family: inherit; }
   box-shadow: var(--sombra);
 }
 .sobre__destaque-icone {
-  width: 38px; height: 38px; min-width: 38px;
-  background: rgba(0,59,203,0.08);
+  width: 40px; height: 40px; min-width: 40px;
+  background: rgba(0,59,203,0.06);
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem;
+  color: var(--azul);
 }
 .sobre__destaque h4 { font-size: 0.85rem; font-weight: 700; }
 .sobre__destaque p { font-size: 0.72rem; color: var(--cinza); }
@@ -600,16 +576,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   overflow: hidden;
 }
 .depoimentos-video .titulo-secao em { color: var(--amarelo); }
-.depoimentos-video::before {
-  content: 'DEPOIMENTOS';
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-titulo);
-  font-size: clamp(4rem, 12vw, 10rem);
-  color: rgba(255,255,255,0.03);
-  pointer-events: none; white-space: nowrap;
-  text-transform: uppercase;
-}
+.depoimentos-video::before { display: none; }
 
 .videos__grid {
   display: grid;
@@ -1091,7 +1058,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   .heroi .wrap { text-align: center; }
   .heroi__desc { margin: 0 auto 32px; }
   .heroi__acoes, .heroi__numeros { justify-content: center; }
-  .heroi__visual { max-width: 520px; margin: 0 auto; transform: rotate(0); }
+  .heroi__visual { max-width: 520px; margin: 0 auto; }
   .planos__grid, .depoimentos__grid { grid-template-columns: 1fr 1fr; }
   .videos__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .rodape__grid { grid-template-columns: 1fr 1fr; }
@@ -1104,25 +1071,52 @@ button { cursor: pointer; border: none; font-family: inherit; }
 @media (max-width: 768px) {
   .topo__menu { display: none; }
   .topo__hamburguer { display: flex; }
+
+  /* Hero mobile */
   .heroi { clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%); min-height: auto; padding: 100px 0 80px; }
   .heroi__titulo { font-size: clamp(1.6rem, 7vw, 2.4rem); }
   .heroi__desc { font-size: 0.95rem; }
+  .heroi__visual { max-width: 400px; }
+
+  /* Faixa mobile */
   .faixa__grid { flex-direction: column; }
   .faixa__item { border-right: none; border-bottom: 1px solid var(--borda); padding: 20px 24px; text-align: left; display: flex; align-items: center; gap: 16px; }
   .faixa__item:last-child { border-bottom: none; }
-  .faixa__icone { margin: 0; min-width: 48px; }
+  .faixa__icone { margin: 0; min-width: 48px; width: 48px; height: 48px; }
+
+  /* Sobre mobile */
   .sobre__destaques { grid-template-columns: 1fr; }
+  .sobre__card-numeros { grid-template-columns: 1fr 1fr; }
+
+  /* Planos mobile */
   .planos__grid, .depoimentos__grid { grid-template-columns: 1fr; }
   .plano-card--destaque { transform: none; }
+  .plano-card { max-width: 100%; }
+
+  /* Videos mobile */
   .videos__grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .video-card__thumb { aspect-ratio: 9/12; }
   .video-card__legenda { padding: 12px; }
   .video-card__legenda strong { font-size: 0.82rem; }
-  .video-modal__conteudo { max-width: 90vw; width: 340px; }
+  .video-modal__conteudo { max-width: 95vw; width: 100%; margin: 0 10px; }
+
+  /* Polos mobile */
   .polos__regiao-grid { grid-template-columns: 1fr; }
+
+  /* EJA mobile */
   .eja { clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%); }
-  .eja__card { padding: 28px 24px; }
+  .eja__card { padding: 28px 20px; }
+  .eja .wrap { gap: 28px; }
+
+  /* Contato mobile — fix email overflow */
+  .contato__item a { word-break: break-all; font-size: 0.82rem; }
+  .contato__grid { grid-template-columns: 1fr; }
+
+  /* Rodapé mobile */
   .rodape__grid { grid-template-columns: 1fr; gap: 24px; }
+  .rodape__col a { word-break: break-all; }
+
+  /* Geral mobile */
   .titulo-secao { font-size: clamp(1.3rem, 5vw, 1.8rem); }
   .whatsapp { bottom: 76px; right: 16px; width: 52px; height: 52px; }
   .whatsapp svg { width: 26px; height: 26px; }
@@ -1130,42 +1124,101 @@ button { cursor: pointer; border: none; font-family: inherit; }
   .barra-mobile { display: block; }
   .cta-final { clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%); }
   .campo input, .campo select, .campo textarea { font-size: 16px; }
+
+  /* CTA final mobile */
+  .cta-final__acoes { flex-direction: column; width: 100%; }
+  .cta-final__acoes .botao { width: 100%; justify-content: center; }
+
+  /* Parceiro mobile */
+  .parceiro .wrap { gap: 20px; padding: 28px 20px; }
 }
 
 @media (max-width: 480px) {
   .wrap { padding: 0 14px; }
-  .heroi__numeros { gap: 20px; }
-  .heroi__numero strong { font-size: 1.5rem; }
+
+  /* Hero mobile small */
+  .heroi { padding: 90px 0 60px; }
+  .heroi__numeros { gap: 16px; }
+  .heroi__numero strong { font-size: 1.4rem; }
   .heroi__acoes { flex-direction: column; }
   .heroi__acoes .botao { width: 100%; justify-content: center; }
+  .heroi__visual { max-width: 300px; }
+
+  /* Botões menores no mobile */
+  .botao { padding: 14px 24px; font-size: 0.8rem; }
+
+  /* Sobre card mobile */
+  .sobre__card-item { padding: 20px 14px; }
+  .sobre__card-valor { font-size: 1.3rem; }
+  .sobre { padding: 60px 0; }
+
+  /* EJA mobile small */
+  .eja__nivel h4 { font-size: 0.85rem; }
+
+  /* Planos mobile small */
+  .plano-card__valor strong { font-size: 2.4rem; }
+
+  /* Videos mobile small */
+  .videos__grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .video-card__thumb { aspect-ratio: 9/13; }
+  .video-card__legenda strong { font-size: 0.75rem; }
+  .video-card__legenda span { font-size: 0.65rem; }
+
+  /* Polos mobile small */
   .polos__contador { flex-direction: column; }
   .polos__contador-item { border-right: none; border-bottom: 1px solid var(--borda); }
   .polos__contador-item:last-child { border-bottom: none; }
-  .faq__pergunta { font-size: 0.88rem; }
-  .contato__grid { grid-template-columns: 1fr; }
-  .cta-final__acoes { flex-direction: column; width: 100%; }
-  .cta-final__acoes .botao { width: 100%; justify-content: center; }
-  .videos__grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .video-card__thumb { aspect-ratio: 9/12; }
+  .polo-item { padding: 10px 12px; }
+  .polo-item strong { font-size: 0.8rem; }
+
+  /* FAQ mobile small */
+  .faq__pergunta { font-size: 0.85rem; }
+
+  /* Contato mobile small */
+  .contato__item { padding: 16px; }
+
+  /* Footer mobile */
+  .rodape { padding: 40px 0 30px; }
+  .rodape__marca-logo span { font-size: 1rem; }
+
+  /* Seções padding reduzido */
+  .cursos, .faq, .polos, .contato { padding: 60px 0; }
+  .depoimentos-video { padding: 60px 0 50px; }
 }
 
 @media (max-width: 380px) {
-  .videos__grid { grid-template-columns: 1fr; gap: 16px; }
+  .videos__grid { grid-template-columns: 1fr; gap: 14px; }
   .video-card__thumb { aspect-ratio: 9/14; }
+  .heroi__titulo { font-size: 1.4rem; }
+  .heroi__tag { font-size: 0.7rem; padding: 5px 14px; }
+  .sobre__card-numeros { grid-template-columns: 1fr; }
+  .sobre__card-item { border-right: none; }
+  .sobre__card-item:nth-child(n+3) { border-bottom: 1px solid var(--borda); }
+  .sobre__card-item:last-child { border-bottom: none; }
 }
 
+/* === Touch devices === */
 @media (hover: none) and (pointer: coarse) {
   .botao { min-height: 48px; }
   .topo__link, .rodape__col a, .topo__mobile a { min-height: 44px; display: flex; align-items: center; }
   .faq__pergunta { min-height: 56px; }
   .plano-card:hover, .depoimento:hover, .polo-item:hover { transform: none; }
   .plano-card--destaque:hover { transform: none; }
+  .botao:hover { transform: none; box-shadow: none; }
   .botao:active { transform: scale(0.97); }
   a, button, [onclick] { touch-action: manipulation; }
 }
 
+/* === Reduced motion === */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   .rv { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }
+
+/* === Safe area for notched phones === */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .barra-mobile { padding-bottom: env(safe-area-inset-bottom); }
+  .rodape { padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
+}
+
