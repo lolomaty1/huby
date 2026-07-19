@@ -177,7 +177,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 }
 .heroi .wrap {
   position: relative; z-index: 2;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: center;
 }
 
 .heroi__tag {
@@ -222,15 +222,15 @@ button { cursor: pointer; border: none; font-family: inherit; }
 /* Hero visual — brand image */
 .heroi__visual {
   position: relative;
-  background: var(--azul);
   border-radius: 20px;
-  padding: 6px;
-  transform: rotate(2deg);
+  transform: rotate(1deg);
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  overflow: hidden;
 }
 .heroi__visual img {
-  border-radius: 16px;
+  border-radius: 20px;
   width: 100%; height: auto;
+  display: block;
 }
 .heroi__visual::before {
   content: ''; position: absolute;
@@ -1091,7 +1091,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   .heroi .wrap { text-align: center; }
   .heroi__desc { margin: 0 auto 32px; }
   .heroi__acoes, .heroi__numeros { justify-content: center; }
-  .heroi__visual { max-width: 420px; margin: 0 auto; transform: rotate(0); }
+  .heroi__visual { max-width: 520px; margin: 0 auto; transform: rotate(0); }
   .planos__grid, .depoimentos__grid { grid-template-columns: 1fr 1fr; }
   .videos__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .rodape__grid { grid-template-columns: 1fr 1fr; }
