@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huby Cursos — Transforme seu Futuro com Educação de Qualidade</title>
+  <meta name="description" content="Huby Cursos oferece EJA EAD, cursos livres e preparatórios com certificado válido, início imediato e pagamento facilitado. Transforme seu futuro hoje!" />
+  <meta name="theme-color" content="#0A2FFF" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0A2FFF" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <img src="images/logo-icon.png" alt="Huby Cursos Logo" />
+        <span class="nav-logo-text">Huby<span>Cursos</span></span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#institucional" class="nav-link">Institucional</a>
+        <a href="#eja" class="nav-link">EJA</a>
+        <a href="#cursos" class="nav-link">Cursos</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="#polos" class="nav-link">Polos</a>
+        <a href="#duvidas" class="nav-link">Dúvidas</a>
+        <a href="#contato" class="nav-link">Contato</a>
+        <a href="#" class="nav-link nav-cta" id="navCtaBtn">Inscreva-se →</a>
+      </div>
+
+      <div class="nav-hamburger" id="navHamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="#inicio">Início</a>
+    <a href="#institucional">Institucional</a>
+    <a href="#eja">EJA</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#polos">Polos</a>
+    <a href="#duvidas">Dúvidas</a>
+    <a href="#contato">Contato</a>
+    <a href="#" class="nav-cta" style="margin-top: 16px;">Inscreva-se →</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Matrículas Abertas 2026
+        </div>
+        <h1 class="hero-title">
+          Transforme seu <span class="highlight">futuro</span> com educação de qualidade
+        </h1>
+        <p class="hero-description">
+          Estude no conforto da sua casa com cursos EAD reconhecidos pelo MEC. 
+          Certificado válido, início imediato e pagamento facilitado.
+        </p>
+        <div class="hero-actions">
+          <a href="#eja" class="btn btn-primary">
+            Começar Agora
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
+          <a href="#institucional" class="btn btn-secondary">
+            Conheça a Huby
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">5.000<span>+</span></div>
+            <div class="hero-stat-label">Alunos Formados</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">98<span>%</span></div>
+            <div class="hero-stat-label">Aprovação</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">50<span>+</span></div>
+            <div class="hero-stat-label">Polos no Brasil</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="images/hero-banner.png" alt="Estudantes Huby Cursos estudando online" />
+        </div>
+        <div class="hero-float-card card-1">
+          <div class="float-card-icon">🎓</div>
+          <div class="float-card-text">Certificado MEC</div>
+          <div class="float-card-sub">Reconhecido em todo Brasil</div>
+        </div>
+        <div class="hero-float-card card-2">
+          <div class="float-card-icon">⚡</div>
+          <div class="float-card-text">Início Imediato</div>
+          <div class="float-card-sub">Comece a estudar hoje</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS BAR ===== -->
+  <section class="benefits-bar">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0A2FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 10 3 12 0v-5"/></svg>
+          </div>
+          <h3 class="benefit-title">Certificado Válido</h3>
+          <p class="benefit-text">Reconhecido pelo MEC em todo o território nacional</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0A2FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="benefit-title">Início Imediato</h3>
+          <p class="benefit-text">Comece a estudar assim que realizar sua matrícula</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0A2FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h3 class="benefit-title">Pagamento Facilitado</h3>
+          <p class="benefit-text">Parcele em até 12x no cartão ou boleto bancário</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-3">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0A2FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="benefit-title">Qualidade Unigran</h3>
+          <p class="benefit-text">Parceria com a universidade referência em EAD</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / INSTITUTIONAL ===== -->
+  <section class="about-section" id="institucional">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-image">
+            <img src="images/hero-banner.png" alt="Equipe Huby Cursos" />
+          </div>
+          <div class="about-accent"></div>
+          <div class="about-stats-card">
+            <div class="about-stats-number">10+</div>
+            <div class="about-stats-text">Anos de<br />Experiência</div>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <span class="section-label">Quem Somos</span>
+          <h2 class="section-title">
+            Educação que <span>transforma vidas</span>
+          </h2>
+          <p class="section-subtitle">
+            A Huby Cursos é uma plataforma educacional dedicada a levar ensino de qualidade para todos os brasileiros, 
+            com foco especial na Educação de Jovens e Adultos (EJA). Nossa missão é democratizar o acesso à educação 
+            através da tecnologia, permitindo que milhares de pessoas realizem o sonho de concluir seus estudos.
+          </p>
+
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">🏆</div>
+              <div class="about-feature-text">
+                <h4>Excelência</h4>
+                <p>Ensino de alta qualidade</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">🌍</div>
+              <div class="about-feature-text">
+                <h4>Acessibilidade</h4>
+                <p>Estude de qualquer lugar</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">💡</div>
+              <div class="about-feature-text">
+                <h4>Inovação</h4>
+                <p>Plataforma moderna</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">🤝</div>
+              <div class="about-feature-text">
+                <h4>Suporte</h4>
+                <p>Apoio ao aluno 24/7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EJA SECTION ===== -->
+  <section class="eja-section" id="eja">
+    <div class="container">
+      <div class="eja-grid">
+        <div class="eja-content reveal">
+          <span class="section-label">EJA EAD</span>
+          <h2 class="section-title">
+            Nunca é tarde para <span>recomeçar</span>
+          </h2>
+          <p class="section-subtitle">
+            A Educação de Jovens e Adultos (EJA) permite que você conclua o Ensino Fundamental e Médio 
+            no seu ritmo, com flexibilidade total e certificado reconhecido pelo MEC.
+          </p>
+
+          <div class="eja-levels">
+            <div class="eja-level">
+              <div class="eja-level-icon">📖</div>
+              <div class="eja-level-text">
+                <h4>Ensino Fundamental — Anos Iniciais</h4>
+                <p>1º ao 5º ano — Duração: 18 meses</p>
+              </div>
+            </div>
+            <div class="eja-level">
+              <div class="eja-level-icon">📚</div>
+              <div class="eja-level-text">
+                <h4>Ensino Fundamental — Anos Finais</h4>
+                <p>6º ao 9º ano — Duração: 18 meses</p>
+              </div>
+            </div>
+            <div class="eja-level">
+              <div class="eja-level-icon">🎓</div>
+              <div class="eja-level-text">
+                <h4>Ensino Médio Completo</h4>
+                <p>1º ao 3º ano — Duração: 18 meses</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contato" class="btn btn-primary">
+            Quero me Matricular
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+
+        <div class="eja-image-wrapper reveal">
+          <img src="images/eja-student.png" alt="Estudante EJA realizando seus estudos" />
+          <div class="eja-price-card">
+            <div class="eja-price-top">
+              <span class="eja-price-label">A partir de</span>
+              <span class="eja-price-value">R$ 89<small>/mês</small></span>
+            </div>
+            <div class="eja-price-bar">
+              <div class="eja-price-bar-fill"></div>
+            </div>
+            <p class="eja-price-footer">⚡ 78% das vagas já preenchidas — Garanta a sua!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES SECTION ===== -->
+  <section class="courses-section" id="cursos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Nossos Cursos</span>
+        <h2 class="section-title">Explore nosso <span>catálogo</span></h2>
+        <p class="section-subtitle">
+          Cursos desenvolvidos para impulsionar sua carreira e ampliar seus conhecimentos
+        </p>
+      </div>
+
+      <div class="courses-grid">
+        <!-- Course 1 -->
+        <div class="course-card reveal">
+          <div class="course-card-image">
+            <img src="images/hero-banner.png" alt="EJA - Ensino Fundamental" />
+            <span class="course-card-badge">Mais Popular</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-card-category">EJA EAD</span>
+            <h3 class="course-card-title">Ensino Fundamental Completo</h3>
+            <div class="course-card-info">
+              <span class="course-card-info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                18 meses
+              </span>
+              <span class="course-card-info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                100% Online
+              </span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-card-price">R$ 89<small>/mês</small></span>
+              <a href="#contato" class="course-card-link">
+                Saiba mais
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card reveal reveal-delay-1">
+          <div class="course-card-image">
+            <img src="images/eja-student.png" alt="EJA - Ensino Médio" />
+            <span class="course-card-badge">Destaque</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-card-category">EJA EAD</span>
+            <h3 class="course-card-title">Ensino Médio Completo</h3>
+            <div class="course-card-info">
+              <span class="course-card-info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                18 meses
+              </span>
+              <span class="course-card-info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                100% Online
+              </span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-card-price">R$ 99<small>/mês</small></span>
+              <a href="#contato" class="course-card-link">
+                Saiba mais
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card reveal reveal-delay-2">
+          <div class="course-card-image">
+            <img src="images/hero-banner.png" alt="EJA Completo - Fundamental e Médio" />
+            <span class="course-card-badge">Melhor Custo</span>
+          </div>
+          <div class="course-card-body">
+            <span class="course-card-category">EJA EAD</span>
+            <h3 class="course-card-title">Pacote Completo — Fundamental + Médio</h3>
+            <div class="course-card-info">
+              <span class="course-card-info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                36 meses
+              </span>
+              <span class="course-card-info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                100% Online
+              </span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-card-price">R$ 149<small>/mês</small></span>
+              <a href="#contato" class="course-card-link">
+                Saiba mais
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section" id="depoimentos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Depoimentos</span>
+        <h2 class="section-title">O que nossos <span>alunos dizem</span></h2>
+        <p class="section-subtitle">
+          Histórias reais de pessoas que transformaram suas vidas através da educação
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <span class="testimonial-quote">"</span>
+          <div class="testimonial-stars">
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "Consegui concluir meu ensino médio aos 42 anos! A plataforma é muito fácil de usar e os professores são excelentes. Recomendo de olhos fechados!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MA</div>
+            <div class="testimonial-author-info">
+              <h4>Maria Aparecida</h4>
+              <p>Aluna EJA — Ensino Médio</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-1">
+          <span class="testimonial-quote">"</span>
+          <div class="testimonial-stars">
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "Trabalho o dia inteiro e achava impossível voltar a estudar. Com a Huby, estudei no meu tempo e consegui meu diploma. Agora vou fazer faculdade!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JS</div>
+            <div class="testimonial-author-info">
+              <h4>José da Silva</h4>
+              <p>Aluno EJA — Ensino Médio</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <span class="testimonial-quote">"</span>
+          <div class="testimonial-stars">
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "O suporte da Huby é incrível! Sempre que tive dúvidas, me atenderam rapidamente. O material didático é de primeira qualidade."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AS</div>
+            <div class="testimonial-author-info">
+              <h4>Ana Santos</h4>
+              <p>Aluna EJA — Ensino Fundamental</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POLOS ===== -->
+  <section class="polos-section" id="polos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Polos de Apoio</span>
+        <h2 class="section-title">Estamos em todo o <span>Brasil</span></h2>
+        <p class="section-subtitle">
+          Encontre o polo presencial mais próximo de você para apoio e aplicação de provas
+        </p>
+      </div>
+
+      <div class="polos-grid">
+        <div class="polo-card reveal">
+          <div class="polo-icon">📍</div>
+          <h3 class="polo-name">Polo São Paulo — SP</h3>
+          <p class="polo-address">Capital e Região Metropolitana</p>
+        </div>
+        <div class="polo-card reveal reveal-delay-1">
+          <div class="polo-icon">📍</div>
+          <h3 class="polo-name">Polo Rio de Janeiro — RJ</h3>
+          <p class="polo-address">Capital e Baixada Fluminense</p>
+        </div>
+        <div class="polo-card reveal reveal-delay-2">
+          <div class="polo-icon">📍</div>
+          <h3 class="polo-name">Polo Belo Horizonte — MG</h3>
+          <p class="polo-address">Capital e Região Central</p>
+        </div>
+        <div class="polo-card reveal reveal-delay-3">
+          <div class="polo-icon">📍</div>
+          <h3 class="polo-name">Polo Salvador — BA</h3>
+          <p class="polo-address">Capital e Região Nordeste</p>
+        </div>
+        <div class="polo-card reveal">
+          <div class="polo-icon">📍</div>
+          <h3 class="polo-name">Polo Curitiba — PR</h3>
+          <p class="polo-address">Capital e Região Sul</p>
+        </div>
+        <div class="polo-card reveal reveal-delay-1">
+          <div class="polo-icon">📍</div>
+          <h3 class="polo-name">Polo Brasília — DF</h3>
+          <p class="polo-address">Distrito Federal e Entorno</p>
+        </div>
+        <div class="polo-card reveal reveal-delay-2">
+          <div class="polo-icon">📍</div>
+          <h3 class="polo-name">Polo Recife — PE</h3>
+          <p class="polo-address">Capital e Região Metropolitana</p>
+        </div>
+        <div class="polo-card reveal reveal-delay-3">
+          <div class="polo-icon">📍</div>
+          <h3 class="polo-name">Polo Manaus — AM</h3>
+          <p class="polo-address">Capital e Região Norte</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section" id="duvidas">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Dúvidas Frequentes</span>
+        <h2 class="section-title">Perguntas mais <span>frequentes</span></h2>
+        <p class="section-subtitle">
+          Encontre respostas para as perguntas mais comuns sobre nossos cursos
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>O diploma da EJA é reconhecido pelo MEC?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Sim! O diploma da EJA oferecido pela Huby Cursos é totalmente reconhecido pelo MEC (Ministério da Educação). 
+              Nosso curso é realizado em parceria com a Unigran, instituição credenciada pelo MEC, garantindo a validade 
+              do certificado em todo o território nacional.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Como funcionam as aulas online?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              As aulas são 100% online, disponíveis 24 horas por dia na nossa plataforma de ensino. 
+              Você estuda no seu ritmo, podendo acessar os materiais pelo computador, tablet ou celular. 
+              As avaliações são presenciais e realizadas nos polos de apoio.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Qual a duração do curso EJA?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              A duração média é de 18 meses para cada etapa (Fundamental Anos Iniciais, Fundamental Anos Finais 
+              ou Ensino Médio). O tempo pode variar de acordo com o aproveitamento de estudos anteriores do aluno.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-3">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Posso estudar pelo celular?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Sim! Nossa plataforma é totalmente responsiva e funciona perfeitamente em celulares, tablets e computadores. 
+              Você pode estudar de onde quiser, basta ter acesso à internet.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Quais são as formas de pagamento?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Aceitamos pagamento via cartão de crédito (parcelamento em até 12x), boleto bancário, 
+              PIX e transferência bancária. Temos condições especiais para pagamento à vista.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Preciso ter algum pré-requisito?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Para o Ensino Fundamental, é necessário ter pelo menos 15 anos. Para o Ensino Médio, 
+              18 anos completos. Além disso, é preciso apresentar documentos pessoais e histórico escolar 
+              (quando houver) no ato da matrícula.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNER CTA ===== -->
+  <section class="partner-section" id="parceiro">
+    <div class="container">
+      <div class="partner-content reveal">
+        <div class="partner-text">
+          <h3>Quer ser um parceiro Huby Cursos?</h3>
+          <p>Abra um polo na sua cidade e faça parte da nossa rede de educação</p>
+        </div>
+        <a href="#contato" class="btn btn-outline">
+          Seja um Parceiro
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2 class="cta-title">Pronto para transformar seu futuro?</h2>
+        <p class="cta-subtitle">
+          Inscreva-se agora e comece a estudar imediatamente. Não deixe para amanhã o que pode mudar sua vida hoje.
+        </p>
+        <div class="cta-actions">
+          <a href="#contato" class="btn btn-primary">
+            Inscreva-se Agora
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
+          <a href="#duvidas" class="btn btn-secondary">
+            Ainda tem dúvidas?
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contato">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Contato</span>
+        <h2 class="section-title">Fale <span>conosco</span></h2>
+        <p class="section-subtitle">
+          Tire suas dúvidas ou solicite informações sobre nossos cursos
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-info-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-info-text">
+              <h4>WhatsApp</h4>
+              <p>Atendimento rápido pelo WhatsApp</p>
+              <a href="#">(11) 99999-9999</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-info-text">
+              <h4>E-mail</h4>
+              <p>Envie sua mensagem por e-mail</p>
+              <a href="mailto:contato@hubycursos.com.br">contato@hubycursos.com.br</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">🕐</div>
+            <div class="contact-info-text">
+              <h4>Horário de Atendimento</h4>
+              <p>Segunda a Sexta: 8h às 18h<br />Sábado: 8h às 12h</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-info-text">
+              <h4>Plataforma de Ensino</h4>
+              <p>Acesse a plataforma do aluno</p>
+              <a href="https://plataforma.hubycursos.com.br" target="_blank">plataforma.hubycursos.com.br</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" onsubmit="handleContactForm(event)">
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Nome completo</label>
+            <input class="form-input" type="text" id="contact-name" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">E-mail</label>
+            <input class="form-input" type="email" id="contact-email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-phone">Telefone / WhatsApp</label>
+            <input class="form-input" type="tel" id="contact-phone" placeholder="(11) 99999-9999" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-subject">Assunto</label>
+            <select class="form-input" id="contact-subject">
+              <option value="">Selecione um assunto</option>
+              <option value="eja-fundamental">EJA — Ensino Fundamental</option>
+              <option value="eja-medio">EJA — Ensino Médio</option>
+              <option value="parceria">Quero ser Parceiro</option>
+              <option value="duvida">Dúvida Geral</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Mensagem</label>
+            <textarea class="form-input" id="contact-message" placeholder="Escreva sua mensagem..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Enviar Mensagem
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo-icon.png" alt="Huby Cursos" style="height: 36px;" />
+            <span class="footer-logo-text">Huby<span>Cursos</span></span>
+          </div>
+          <p>
+            Transformando vidas através da educação de qualidade. Cursos EAD reconhecidos pelo MEC 
+            com início imediato e pagamento facilitado.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer-social" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer-social" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="footer-social" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cursos</h4>
+          <a href="#eja">EJA — Ensino Fundamental</a>
+          <a href="#eja">EJA — Ensino Médio</a>
+          <a href="#cursos">Todos os Cursos</a>
+          <a href="https://plataforma.hubycursos.com.br" target="_blank">Plataforma do Aluno</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <a href="#institucional">Sobre a Huby</a>
+          <a href="#polos">Polos de Apoio</a>
+          <a href="#parceiro">Seja Parceiro</a>
+          <a href="#duvidas">Perguntas Frequentes</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <a href="#contato">Fale Conosco</a>
+          <a href="mailto:contato@hubycursos.com.br">contato@hubycursos.com.br</a>
+          <a href="#">(11) 99999-9999</a>
+          <a href="#">Área do Candidato</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Huby Cursos. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE STICKY CTA BAR ===== -->
+  <div class="mobile-cta-bar" id="mobileCta">
+    <a href="#contato" class="btn btn-primary">
+      Inscreva-se Agora — Vagas Limitadas
+      <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    </a>
+  </div>
+
+  <!-- ===== WHATSAPP BUTTON ===== -->
+
+  <a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os cursos da Huby." 
+     class="whatsapp-btn" target="_blank" aria-label="WhatsApp" id="whatsappBtn">
+    <svg viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="script.js"></script>
+</body>
+
+</html>
