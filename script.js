@@ -106,4 +106,34 @@ window.addEventListener('resize', () => {
   }
 });
 
+// ===== VIDEO MODAL =====
+const videoModal = document.getElementById('videoModal');
+const videoFrame = document.getElementById('videoFrame');
+const fecharModal = document.getElementById('fecharModal');
+
+document.querySelectorAll('.video-card__thumb').forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    const videoId = thumb.dataset.video;
+    if (videoId && videoModal) {
+      videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      videoModal.classList.add('ativo');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+});
+
+function fecharVideo() {
+  videoModal.classList.remove('ativo');
+  videoFrame.src = '';
+  document.body.style.overflow = '';
+}
+
+if (fecharModal) fecharModal.addEventListener('click', fecharVideo);
+if (videoModal) videoModal.addEventListener('click', (e) => {
+  if (e.target === videoModal) fecharVideo();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && videoModal.classList.contains('ativo')) fecharVideo();
+});
+
 console.log('🎓 Huby Cursos — Site carregado!');

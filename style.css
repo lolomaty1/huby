@@ -515,6 +515,137 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .curso-card__link:hover { gap: 10px; }
 
 /* ===========================================
+   VIDEO DEPOIMENTOS — YouTube shorts style
+   =========================================== */
+.depoimentos-video {
+  padding: 100px 0 80px;
+  background: var(--azul);
+  position: relative;
+  overflow: hidden;
+}
+.depoimentos-video::before {
+  content: 'DEPOIMENTOS';
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-titulo);
+  font-size: clamp(4rem, 12vw, 10rem);
+  color: rgba(255,255,255,0.03);
+  pointer-events: none; white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.videos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.video-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: var(--transicao);
+}
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+  border-color: var(--amarelo);
+}
+
+.video-card__thumb {
+  position: relative;
+  aspect-ratio: 9/14;
+  overflow: hidden;
+  cursor: pointer;
+}
+.video-card__thumb img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.video-card:hover .video-card__thumb img {
+  transform: scale(1.05);
+}
+
+.video-card__play {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px; height: 48px;
+  opacity: 0.9;
+  transition: var(--transicao);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+.video-card:hover .video-card__play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-card__info {
+  position: absolute; top: 12px; left: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.video-card__canal {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--branco);
+}
+
+.video-card__legenda {
+  padding: 16px;
+}
+.video-card__legenda strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--branco);
+  margin-bottom: 4px;
+}
+.video-card__legenda span {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+/* Video Modal */
+.video-modal {
+  display: none;
+  position: fixed; inset: 0;
+  z-index: 10000;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(8px);
+  align-items: center; justify-content: center;
+}
+.video-modal.ativo { display: flex; }
+.video-modal__conteudo {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  aspect-ratio: 9/16;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+.video-modal__conteudo iframe {
+  width: 100%; height: 100%; border: 0;
+}
+.video-modal__fechar {
+  position: absolute; top: -50px; right: 0;
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  color: var(--branco);
+  font-size: 1.2rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: var(--transicao);
+}
+.video-modal__fechar:hover { background: rgba(255,255,255,0.2); }
+
+/* ===========================================
    DEPOIMENTOS — offset cards
    =========================================== */
 .depoimentos {
@@ -795,6 +926,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   .heroi__acoes, .heroi__numeros { justify-content: center; }
   .heroi__visual { max-width: 420px; margin: 0 auto; transform: rotate(0); }
   .cursos__grid, .depoimentos__grid { grid-template-columns: 1fr 1fr; }
+  .videos__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .rodape__grid { grid-template-columns: 1fr 1fr; }
   .parceiro .wrap { flex-direction: column; text-align: center; }
   .polos__grid { grid-template-columns: repeat(3, 1fr); }
@@ -813,6 +945,11 @@ button { cursor: pointer; border: none; font-family: inherit; }
   .faixa__icone { margin: 0; min-width: 48px; }
   .sobre__destaques { grid-template-columns: 1fr; }
   .cursos__grid, .depoimentos__grid { grid-template-columns: 1fr; }
+  .videos__grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .video-card__thumb { aspect-ratio: 9/12; }
+  .video-card__legenda { padding: 12px; }
+  .video-card__legenda strong { font-size: 0.82rem; }
+  .video-modal__conteudo { max-width: 90vw; width: 340px; }
   .polos__grid { grid-template-columns: 1fr 1fr; }
   .eja { clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%); }
   .eja__card { padding: 28px 24px; }
