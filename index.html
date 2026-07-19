@@ -137,8 +137,29 @@
   <!-- ========== SOBRE / INSTITUCIONAL ========== -->
   <section class="sobre" id="sobre">
     <div class="wrap">
-      <div class="sobre__img-box rv">
-        <img src="https://www.hubycursos.com.br/assets/site/images/logo/simbolo-huby.png" alt="Símbolo Huby Cursos" style="max-width: 280px; margin: 0 auto; padding: 40px; background: white; border-radius: 16px;" />
+      <div class="sobre__visual rv">
+        <div class="sobre__card-numeros">
+          <div class="sobre__card-item">
+            <span class="sobre__card-valor">5.000+</span>
+            <span class="sobre__card-label">Alunos formados</span>
+          </div>
+          <div class="sobre__card-item">
+            <span class="sobre__card-valor">50+</span>
+            <span class="sobre__card-label">Polos no Brasil</span>
+          </div>
+          <div class="sobre__card-item">
+            <span class="sobre__card-valor">98%</span>
+            <span class="sobre__card-label">Aprovação</span>
+          </div>
+          <div class="sobre__card-item">
+            <span class="sobre__card-valor">24h</span>
+            <span class="sobre__card-label">Plataforma online</span>
+          </div>
+        </div>
+        <div class="sobre__card-rodape">
+          <img src="https://www.hubycursos.com.br/assets/site/images/logo/simbolo-huby.png" alt="Huby" style="height:32px;" />
+          <span>Parceira oficial <strong>Unigran</strong></span>
+        </div>
       </div>
       <div class="rv rv-d1">
         <span class="rotulo">Quem Somos</span>
@@ -234,65 +255,83 @@
     </div>
   </section>
 
-  <!-- ========== CURSOS ========== -->
+  <!-- ========== PLANOS / CURSOS ========== -->
   <section class="cursos" id="cursos">
     <div class="wrap">
       <div class="cabecalho rv">
-        <span class="rotulo">Nossos Cursos</span>
-        <h2 class="titulo-secao">Escolha o curso <em>ideal</em> para você</h2>
-        <p class="subtitulo-secao">Opções flexíveis para você concluir seus estudos no seu ritmo</p>
+        <span class="rotulo">Nossos Planos</span>
+        <h2 class="titulo-secao">Escolha o plano <em>ideal</em> para você</h2>
+        <p class="subtitulo-secao">Investimento acessível para mudar o seu futuro</p>
       </div>
 
-      <div class="cursos__grid">
-        <div class="curso-card rv">
-          <div class="curso-card__topo">
-            <span class="curso-card__badge">Popular</span>
-            <div class="curso-card__categoria">EJA EAD</div>
-            <h3 class="curso-card__titulo">Ensino Fundamental Completo</h3>
-            <div class="curso-card__info">
-              <span>⏱ 18 meses</span>
-              <span>💻 100% Online</span>
-              <span>📜 MEC</span>
-            </div>
+      <div class="planos__grid">
+        <!-- PLANO 1 -->
+        <div class="plano-card rv">
+          <div class="plano-card__header">
+            <span class="plano-card__tag">Fundamental I</span>
+            <h3 class="plano-card__titulo">Anos Iniciais</h3>
+            <p class="plano-card__sub">1º ao 5º ano</p>
           </div>
-          <div class="curso-card__rodape">
-            <span class="curso-card__preco">R$ 89<small>/mês</small></span>
-            <a href="#contato" class="curso-card__link">Saiba mais →</a>
+          <div class="plano-card__preco">
+            <span class="plano-card__de">A partir de</span>
+            <div class="plano-card__valor">R$ <strong>79</strong><span>/mês</span></div>
           </div>
+          <ul class="plano-card__lista">
+            <li>✓ Certificado MEC</li>
+            <li>✓ 100% Online — 24h</li>
+            <li>✓ Duração: 18 meses</li>
+            <li>✓ Material incluso</li>
+            <li>✓ Suporte via WhatsApp</li>
+          </ul>
+          <a href="#contato" class="botao botao--outline" style="width:100%;justify-content:center;">Quero este plano</a>
         </div>
 
-        <div class="curso-card rv rv-d1">
-          <div class="curso-card__topo">
-            <span class="curso-card__badge">Destaque</span>
-            <div class="curso-card__categoria">EJA EAD</div>
-            <h3 class="curso-card__titulo">Ensino Médio Completo</h3>
-            <div class="curso-card__info">
-              <span>⏱ 18 meses</span>
-              <span>💻 100% Online</span>
-              <span>📜 MEC</span>
-            </div>
+        <!-- PLANO 2 (DESTAQUE) -->
+        <div class="plano-card plano-card--destaque rv rv-d1">
+          <div class="plano-card__ribbon">Mais Escolhido</div>
+          <div class="plano-card__header">
+            <span class="plano-card__tag">Ensino Médio</span>
+            <h3 class="plano-card__titulo">Completo</h3>
+            <p class="plano-card__sub">1º ao 3º ano</p>
           </div>
-          <div class="curso-card__rodape">
-            <span class="curso-card__preco">R$ 99<small>/mês</small></span>
-            <a href="#contato" class="curso-card__link">Saiba mais →</a>
+          <div class="plano-card__preco">
+            <span class="plano-card__de">A partir de</span>
+            <div class="plano-card__valor">R$ <strong>89</strong><span>/mês</span></div>
           </div>
+          <ul class="plano-card__lista">
+            <li>✓ Certificado MEC</li>
+            <li>✓ 100% Online — 24h</li>
+            <li>✓ Duração: 18 meses</li>
+            <li>✓ Material incluso</li>
+            <li>✓ Suporte prioritário</li>
+            <li>✓ Parcele em até 12x</li>
+          </ul>
+          <a href="#contato" class="botao botao--amarelo" style="width:100%;justify-content:center;">
+            Garantir Minha Vaga
+            <svg class="botao-seta" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
         </div>
 
-        <div class="curso-card rv rv-d2">
-          <div class="curso-card__topo">
-            <span class="curso-card__badge">Melhor Valor</span>
-            <div class="curso-card__categoria">EJA EAD</div>
-            <h3 class="curso-card__titulo">Pacote Fundamental + Médio</h3>
-            <div class="curso-card__info">
-              <span>⏱ 36 meses</span>
-              <span>💻 100% Online</span>
-              <span>📜 MEC</span>
-            </div>
+        <!-- PLANO 3 -->
+        <div class="plano-card rv rv-d2">
+          <div class="plano-card__header">
+            <span class="plano-card__tag">Pacote Completo</span>
+            <h3 class="plano-card__titulo">Fundamental + Médio</h3>
+            <p class="plano-card__sub">Formação integral</p>
           </div>
-          <div class="curso-card__rodape">
-            <span class="curso-card__preco">R$ 149<small>/mês</small></span>
-            <a href="#contato" class="curso-card__link">Saiba mais →</a>
+          <div class="plano-card__preco">
+            <span class="plano-card__de">A partir de</span>
+            <div class="plano-card__valor">R$ <strong>149</strong><span>/mês</span></div>
           </div>
+          <ul class="plano-card__lista">
+            <li>✓ Certificado MEC</li>
+            <li>✓ 100% Online — 24h</li>
+            <li>✓ Duração: 36 meses</li>
+            <li>✓ Material incluso</li>
+            <li>✓ Suporte via WhatsApp</li>
+            <li>✓ Melhor custo-benefício</li>
+          </ul>
+          <a href="#contato" class="botao botao--outline" style="width:100%;justify-content:center;">Quero este plano</a>
         </div>
       </div>
     </div>
@@ -426,40 +465,142 @@
       </div>
     </div>
   </section>
-          <div class="depoimento__estrelas">★★★★★</div>
-          <p class="depoimento__texto">
-            O atendimento da Huby é diferenciado. Me senti acolhida desde o primeiro contato. 
-            O material é de qualidade e o suporte nunca me deixou na mão.
-          </p>
-          <div class="depoimento__autor">
-            <div class="depoimento__avatar">AS</div>
-            <div>
-              <div class="depoimento__nome">Ana Santos</div>
-              <div class="depoimento__curso">EJA — Ensino Fundamental</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========== POLOS ========== -->
   <section class="polos" id="polos">
     <div class="wrap">
-      <div class="cabecalho rv">
-        <span class="rotulo">Polos de Apoio</span>
-        <h2 class="titulo-secao">Presença em <em>todo o Brasil</em></h2>
-        <p class="subtitulo-secao">Polos presenciais para aplicação de provas e suporte</p>
-      </div>
-      <div class="polos__grid">
-        <div class="polo rv"><div class="polo__icone">📍</div><div class="polo__nome">São Paulo — SP</div><div class="polo__regiao">Capital e Região</div></div>
-        <div class="polo rv rv-d1"><div class="polo__icone">📍</div><div class="polo__nome">Rio de Janeiro — RJ</div><div class="polo__regiao">Capital e Baixada</div></div>
-        <div class="polo rv rv-d2"><div class="polo__icone">📍</div><div class="polo__nome">Belo Horizonte — MG</div><div class="polo__regiao">Capital e Região</div></div>
-        <div class="polo rv rv-d3"><div class="polo__icone">📍</div><div class="polo__nome">Salvador — BA</div><div class="polo__regiao">Capital e Nordeste</div></div>
-        <div class="polo rv"><div class="polo__icone">📍</div><div class="polo__nome">Curitiba — PR</div><div class="polo__regiao">Capital e Região Sul</div></div>
-        <div class="polo rv rv-d1"><div class="polo__icone">📍</div><div class="polo__nome">Brasília — DF</div><div class="polo__regiao">Distrito Federal</div></div>
-        <div class="polo rv rv-d2"><div class="polo__icone">📍</div><div class="polo__nome">Recife — PE</div><div class="polo__regiao">Capital e Região</div></div>
-        <div class="polo rv rv-d3"><div class="polo__icone">📍</div><div class="polo__nome">Manaus — AM</div><div class="polo__regiao">Capital e Região Norte</div></div>
+      <div class="polos__layout">
+        <!-- Lado esquerdo: visual card -->
+        <div class="polos__info rv">
+          <span class="rotulo">Polos de Apoio</span>
+          <h2 class="titulo-secao">Presença em <em>todo o Brasil</em></h2>
+          <p class="subtitulo-secao">Polos presenciais para aplicação de provas, atendimento e suporte pedagógico.</p>
+
+          <div class="polos__contador">
+            <div class="polos__contador-item">
+              <span class="polos__contador-num">50+</span>
+              <span class="polos__contador-label">Polos ativos</span>
+            </div>
+            <div class="polos__contador-item">
+              <span class="polos__contador-num">20+</span>
+              <span class="polos__contador-label">Estados</span>
+            </div>
+            <div class="polos__contador-item">
+              <span class="polos__contador-num">5</span>
+              <span class="polos__contador-label">Regiões</span>
+            </div>
+          </div>
+
+          <div class="polos__cta">
+            <p>Não encontrou um polo perto de você?</p>
+            <a href="#contato" class="botao botao--azul">
+              Fale Conosco
+              <svg class="botao-seta" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Lado direito: lista de polos por região -->
+        <div class="polos__lista rv rv-d1">
+          <div class="polos__regiao">
+            <h4 class="polos__regiao-titulo">
+              <span class="polos__regiao-dot" style="background:#FF6B6B;"></span>
+              Sudeste
+            </h4>
+            <div class="polos__regiao-grid">
+              <div class="polo-item">
+                <div class="polo-item__icone">🏛️</div>
+                <div>
+                  <strong>São Paulo — SP</strong>
+                  <span>Capital e Grande SP</span>
+                </div>
+              </div>
+              <div class="polo-item">
+                <div class="polo-item__icone">🏛️</div>
+                <div>
+                  <strong>Rio de Janeiro — RJ</strong>
+                  <span>Capital e Baixada</span>
+                </div>
+              </div>
+              <div class="polo-item">
+                <div class="polo-item__icone">🏛️</div>
+                <div>
+                  <strong>Belo Horizonte — MG</strong>
+                  <span>Capital e Região</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="polos__regiao">
+            <h4 class="polos__regiao-titulo">
+              <span class="polos__regiao-dot" style="background:#4ECDC4;"></span>
+              Nordeste
+            </h4>
+            <div class="polos__regiao-grid">
+              <div class="polo-item">
+                <div class="polo-item__icone">🏛️</div>
+                <div>
+                  <strong>Salvador — BA</strong>
+                  <span>Capital e Região</span>
+                </div>
+              </div>
+              <div class="polo-item">
+                <div class="polo-item__icone">🏛️</div>
+                <div>
+                  <strong>Recife — PE</strong>
+                  <span>Capital e Região</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="polos__regiao">
+            <h4 class="polos__regiao-titulo">
+              <span class="polos__regiao-dot" style="background:#45B7D1;"></span>
+              Sul
+            </h4>
+            <div class="polos__regiao-grid">
+              <div class="polo-item">
+                <div class="polo-item__icone">🏛️</div>
+                <div>
+                  <strong>Curitiba — PR</strong>
+                  <span>Capital e Região</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="polos__regiao">
+            <h4 class="polos__regiao-titulo">
+              <span class="polos__regiao-dot" style="background:#F7DC6F;"></span>
+              Centro-Oeste &amp; Norte
+            </h4>
+            <div class="polos__regiao-grid">
+              <div class="polo-item">
+                <div class="polo-item__icone">🏛️</div>
+                <div>
+                  <strong>Brasília — DF</strong>
+                  <span>Distrito Federal</span>
+                </div>
+              </div>
+              <div class="polo-item">
+                <div class="polo-item__icone">🏛️</div>
+                <div>
+                  <strong>Manaus — AM</strong>
+                  <span>Capital e Região</span>
+                </div>
+              </div>
+              <div class="polo-item">
+                <div class="polo-item__icone">🏛️</div>
+                <div>
+                  <strong>Campo Grande — MS</strong>
+                  <span>Sede Huby Cursos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -658,7 +799,7 @@
           <a href="#contato">Fale Conosco</a>
           <a href="mailto:contato@hubycursos.com.br">contato@hubycursos.com.br</a>
           <a href="#">(11) 99999-9999</a>
-          <a href="/area-candidato">Área do Candidato</a>
+          <a href="https://plataforma.hubycursos.com.br" target="_blank">Área do Candidato</a>
         </div>
       </div>
       <div class="rodape__baixo">© 2026 Huby Cursos. Todos os direitos reservados.</div>
@@ -684,7 +825,7 @@
   <div class="video-modal" id="videoModal">
     <div class="video-modal__conteudo">
       <button class="video-modal__fechar" id="fecharModal">✕</button>
-      <iframe id="videoFrame" src="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe id="videoFrame" src="" title="Depoimento de aluno Huby Cursos" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 

@@ -20,8 +20,13 @@ menuMobile.querySelectorAll('a').forEach(l => l.addEventListener('click', () => 
   document.body.style.overflow = '';
 }));
 
+// ===== UNIFIED ESCAPE HANDLER =====
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && menuMobile.classList.contains('ativo')) {
+  if (e.key !== 'Escape') return;
+  // Priority: video modal first, then mobile menu
+  if (videoModal && videoModal.classList.contains('ativo')) {
+    fecharVideo();
+  } else if (menuMobile.classList.contains('ativo')) {
     hamburguer.classList.remove('ativo');
     menuMobile.classList.remove('ativo');
     document.body.style.overflow = '';
@@ -32,10 +37,10 @@ document.addEventListener('keydown', e => {
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', function (e) {
     const id = this.getAttribute('href');
-    if (id === '#') return;
-    e.preventDefault();
+    if (id === '#') return; // let default behavior work for logo
     const el = document.querySelector(id);
     if (el) {
+      e.preventDefault();
       window.scrollTo({ top: el.offsetTop - topo.offsetHeight - 16, behavior: 'smooth' });
       if (menuMobile.classList.contains('ativo')) {
         hamburguer.classList.remove('ativo');
@@ -123,6 +128,7 @@ document.querySelectorAll('.video-card__thumb').forEach(thumb => {
 });
 
 function fecharVideo() {
+  if (!videoModal) return;
   videoModal.classList.remove('ativo');
   videoFrame.src = '';
   document.body.style.overflow = '';
@@ -131,9 +137,6 @@ function fecharVideo() {
 if (fecharModal) fecharModal.addEventListener('click', fecharVideo);
 if (videoModal) videoModal.addEventListener('click', (e) => {
   if (e.target === videoModal) fecharVideo();
-});
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && videoModal.classList.contains('ativo')) fecharVideo();
 });
 
 console.log('🎓 Huby Cursos — Site carregado!');
