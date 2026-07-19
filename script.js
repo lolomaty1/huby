@@ -1,33 +1,42 @@
 // ===== NAVBAR =====
 const topo = document.getElementById('topo');
-window.addEventListener('scroll', () => {
-  topo.classList.toggle('topo--fixo', window.pageYOffset > 60);
-}, { passive: true });
+if (topo) {
+  window.addEventListener('scroll', () => {
+    // scrollY é a propriedade padrão moderna recomendada (substituindo pageYOffset)
+    topo.classList.toggle('topo--fixo', window.scrollY > 60);
+  }, { passive: true });
+}
 
 // ===== MOBILE MENU =====
 const hamburguer = document.getElementById('hamburguer');
 const menuMobile = document.getElementById('menuMobile');
 
-hamburguer.addEventListener('click', () => {
-  hamburguer.classList.toggle('ativo');
-  menuMobile.classList.toggle('ativo');
-  document.body.style.overflow = menuMobile.classList.contains('ativo') ? 'hidden' : '';
-});
+if (hamburguer && menuMobile) {
+  hamburguer.addEventListener('click', () => {
+    hamburguer.classList.toggle('ativo');
+    menuMobile.classList.toggle('ativo');
+    document.body.style.overflow = menuMobile.classList.contains('ativo') ? 'hidden' : '';
+  });
 
-menuMobile.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-  hamburguer.classList.remove('ativo');
-  menuMobile.classList.remove('ativo');
-  document.body.style.overflow = '';
-}));
+  menuMobile.querySelectorAll('a').forEach(l => {
+    l.addEventListener('click', () => {
+      hamburguer.classList.remove('ativo');
+      menuMobile.classList.remove('ativo');
+      document.body.style.overflow = '';
+    });
+  });
+}
 
 // ===== UNIFIED ESCAPE HANDLER =====
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
-  // Priority: video modal first, then mobile menu
+  
+  // Modal de vídeo tem prioridade de fechamento
+  const videoModal = document.getElementById('videoModal');
   if (videoModal && videoModal.classList.contains('ativo')) {
     fecharVideo();
-  } else if (menuMobile.classList.contains('ativo')) {
-    hamburguer.classList.remove('ativo');
+  } else if (menuMobile && menuMobile.classList.contains('ativo')) {
+    if (hamburguer) hamburguer.classList.remove('ativo');
     menuMobile.classList.remove('ativo');
     document.body.style.overflow = '';
   }
@@ -37,13 +46,16 @@ document.addEventListener('keydown', e => {
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', function (e) {
     const id = this.getAttribute('href');
-    if (id === '#') return; // let default behavior work for logo
+    if (id === '#') return; // Comportamento padrão para logo/início
+    
     const el = document.querySelector(id);
     if (el) {
       e.preventDefault();
-      window.scrollTo({ top: el.offsetTop - topo.offsetHeight - 16, behavior: 'smooth' });
-      if (menuMobile.classList.contains('ativo')) {
-        hamburguer.classList.remove('ativo');
+      const offsetTop = el.offsetTop - (topo ? topo.offsetHeight : 0) - 16;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      
+      if (menuMobile && menuMobile.classList.contains('ativo')) {
+        if (hamburguer) hamburguer.classList.remove('ativo');
         menuMobile.classList.remove('ativo');
         document.body.style.overflow = '';
       }
@@ -51,31 +63,44 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// ===== SCROLL REVEAL =====
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+// ===== SCROLL REVEAL (Intersection Observer) =====
+const observerElements = document.querySelectorAll('.rv');
+if (observerElements.length > 0) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('vis');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  
+  observerElements.forEach(el => obs.observe(el));
+}
 
 // ===== FAQ =====
 function abrirFaq(el) {
+  if (!el) return;
   const item = el.closest('.faq__item');
+  if (!item) return;
+  
   const aberto = item.classList.contains('aberto');
   document.querySelectorAll('.faq__item.aberto').forEach(i => i.classList.remove('aberto'));
   if (!aberto) item.classList.add('aberto');
 }
 
-// ===== SCROLL TOP =====
+// ===== SCROLL TOP BUTTON =====
 const voltarTopo = document.getElementById('voltarTopo');
-window.addEventListener('scroll', () => {
-  voltarTopo.classList.toggle('visivel', window.pageYOffset > 500);
-}, { passive: true });
+if (voltarTopo) {
+  window.addEventListener('scroll', () => {
+    voltarTopo.classList.toggle('visivel', window.scrollY > 500);
+  }, { passive: true });
+}
 
 // ===== MOBILE CTA BAR =====
 const barraMobile = document.getElementById('barraMobile');
 if (barraMobile) {
   window.addEventListener('scroll', () => {
-    barraMobile.classList.toggle('visivel', window.pageYOffset > 500);
+    barraMobile.classList.toggle('visivel', window.scrollY > 500);
   }, { passive: true });
 }
 
@@ -91,52 +116,69 @@ if (tel) {
   });
 }
 
-// ===== FORM =====
+// ===== FORM CONTACT =====
 function enviarForm(e) {
   e.preventDefault();
+  if (!e.target) return;
+  
   const btn = e.target.querySelector('.botao');
-  const html = btn.innerHTML;
+  if (!btn) return;
+  
+  const htmlOriginal = btn.innerHTML;
   btn.disabled = true;
   btn.innerHTML = '✓ Mensagem Enviada!';
   btn.style.background = '#25D366';
-  setTimeout(() => { btn.innerHTML = html; btn.style.background = ''; btn.disabled = false; e.target.reset(); }, 3000);
+  
+  setTimeout(() => {
+    btn.innerHTML = htmlOriginal;
+    btn.style.background = '';
+    btn.disabled = false;
+    e.target.reset();
+  }, 3000);
 }
 
-// ===== RESIZE =====
+// ===== RESIZE WINDOW =====
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 768 && menuMobile.classList.contains('ativo')) {
-    hamburguer.classList.remove('ativo');
+  if (window.innerWidth > 768 && menuMobile && menuMobile.classList.contains('ativo')) {
+    if (hamburguer) hamburguer.classList.remove('ativo');
     menuMobile.classList.remove('ativo');
     document.body.style.overflow = '';
   }
 });
 
-// ===== VIDEO MODAL =====
+// ===== VIDEO MODAL CONTROLS =====
 const videoModal = document.getElementById('videoModal');
 const videoFrame = document.getElementById('videoFrame');
 const fecharModal = document.getElementById('fecharModal');
 
-document.querySelectorAll('.video-card__thumb').forEach(thumb => {
-  thumb.addEventListener('click', () => {
-    const videoId = thumb.dataset.video;
-    if (videoId && videoModal) {
-      videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-      videoModal.classList.add('ativo');
-      document.body.style.overflow = 'hidden';
-    }
+if (videoModal && videoFrame) {
+  document.querySelectorAll('.video-card__thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const videoId = thumb.dataset.video;
+      if (videoId) {
+        videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        videoModal.classList.add('ativo');
+        document.body.style.overflow = 'hidden';
+      }
+    });
   });
-});
-
-function fecharVideo() {
-  if (!videoModal) return;
-  videoModal.classList.remove('ativo');
-  videoFrame.src = '';
-  document.body.style.overflow = '';
 }
 
-if (fecharModal) fecharModal.addEventListener('click', fecharVideo);
-if (videoModal) videoModal.addEventListener('click', (e) => {
-  if (e.target === videoModal) fecharVideo();
-});
+function fecharVideo() {
+  if (videoModal && videoFrame) {
+    videoModal.classList.remove('ativo');
+    videoFrame.src = '';
+    document.body.style.overflow = '';
+  }
+}
 
-console.log('🎓 Huby Cursos — Site carregado!');
+if (fecharModal) {
+  fecharModal.addEventListener('click', fecharVideo);
+}
+if (videoModal) {
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) fecharVideo();
+  });
+}
+
+console.log('🎓 Huby Cursos — Versão institucional finalizada com segurança!');
