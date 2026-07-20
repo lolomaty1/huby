@@ -181,4 +181,105 @@ if (videoModal) {
   });
 }
 
+// ===== INTERACTIVE PLANS SYSTEM =====
+const planosDados = [
+  {
+    tag: "Ensino Fundamental I",
+    titulo: "Ensino Fundamental — Anos Iniciais",
+    sub: "Ideal para quem precisa concluir a alfabetização e as séries iniciais (1º ao 5º ano).",
+    preco: "79",
+    parcelas: "Início imediato após matrícula",
+    beneficios: [
+      "✓ Certificado válido reconhecido pelo MEC",
+      "✓ Aulas 100% online — Plataforma ativa 24h",
+      "✓ Todo o material de apoio em PDF incluso",
+      "✓ Duração recomendada: 18 meses",
+      "✓ Suporte pedagógico direto pelo WhatsApp"
+    ]
+  },
+  {
+    tag: "Ensino Fundamental II",
+    titulo: "Ensino Fundamental — Anos Finais",
+    sub: "Focado na conclusão do 6º ao 9º ano com apostilas simplificadas.",
+    preco: "79",
+    parcelas: "Duração acelerada e flexível",
+    beneficios: [
+      "✓ Certificado válido reconhecido pelo MEC",
+      "✓ Estude de onde quiser pelo celular ou PC",
+      "✓ Tutoria online para esclarecer dúvidas",
+      "✓ Sem taxas ocultas de matrícula ou provas",
+      "✓ Exercícios preparatórios inclusos"
+    ]
+  },
+  {
+    tag: "Ensino Médio Completo",
+    titulo: "Ensino Médio Completo (1º ao 3º ano)",
+    sub: "O plano mais buscado. Perfeito para quem busca aprovação rápida e ingresso em faculdades.",
+    preco: "89",
+    parcelas: "Duração recomendada: 18 meses",
+    beneficios: [
+      "✓ Certificado registrado e reconhecido pelo MEC",
+      "✓ Parceria com a Unigran e validade nacional",
+      "✓ Aulas gravadas acessíveis a qualquer momento",
+      "✓ Suporte pedagógico direto no WhatsApp",
+      "✓ Aproveitamento de estudos anteriores"
+    ]
+  },
+  {
+    tag: "Fundamental + Médio",
+    titulo: "Combo: Fundamental + Médio Completo",
+    sub: "Formação integral acelerada para quem precisa do diploma do ensino básico completo.",
+    preco: "149",
+    parcelas: "Melhor custo-benefício por mês",
+    beneficios: [
+      "✓ Certificados válidos e registrados pelo MEC",
+      "✓ Acesso total e ilimitado a todas as disciplinas",
+      "✓ Economia significativa nas mensalidades combinadas",
+      "✓ Suporte prioritário com coordenadores",
+      "✓ Conclusão flexível no seu tempo"
+    ]
+  }
+];
+
+function mudarPlano(index, elemento) {
+  const dados = planosDados[index];
+  if (!dados) return;
+
+  // Atualizar botões ativos
+  document.querySelectorAll('.painel-planos__aba').forEach(btn => btn.classList.remove('ativa'));
+  if (elemento) elemento.classList.add('ativa');
+
+  // Selecionar elementos dos detalhes com efeito suave de fade
+  const detalhes = document.getElementById('detalhesPlano');
+  if (detalhes) {
+    detalhes.style.opacity = '0.3';
+    detalhes.style.transform = 'translateY(4px)';
+    
+    setTimeout(() => {
+      document.getElementById('planoTag').innerText = dados.tag;
+      document.getElementById('planoTitulo').innerText = dados.titulo;
+      document.getElementById('planoSub').innerText = dados.sub;
+      document.getElementById('planoPreco').innerText = dados.preco;
+      document.getElementById('planoParcelas').innerText = dados.parcelas;
+
+      // Limpar e reconstruir lista de benefícios
+      const lista = document.getElementById('planoBeneficios');
+      if (lista) {
+        lista.innerHTML = dados.beneficios.map(b => `<li>${b}</li>`).join('');
+      }
+
+      detalhes.style.opacity = '1';
+      detalhes.style.transform = 'translateY(0)';
+    }, 180);
+  }
+}
+
+// Inicializar com o Ensino Médio como padrão (index 2) no carregamento
+window.addEventListener('DOMContentLoaded', () => {
+  const abas = document.querySelectorAll('.painel-planos__aba');
+  if (abas.length > 2) {
+    mudarPlano(2, abas[2]);
+  }
+});
+
 console.log('🎓 Huby Cursos — Versão institucional finalizada com segurança!');

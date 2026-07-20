@@ -260,79 +260,82 @@
   <section class="cursos" id="cursos">
     <div class="wrap">
       <div class="cabecalho rv">
-        <span class="rotulo">Nossos Planos</span>
-        <h2 class="titulo-secao">Escolha o plano <em>ideal</em> para você</h2>
-        <p class="subtitulo-secao">Investimento acessível para mudar o seu futuro</p>
+        <span class="rotulo">Valores e Planos</span>
+        <h2 class="titulo-secao">Selecione o plano <em>ideal</em></h2>
+        <p class="subtitulo-secao">Planos acessíveis e flexíveis para concluir seus estudos de forma rápida e 100% online.</p>
       </div>
 
-      <div class="planos__grid">
-        <!-- PLANO 1 -->
-        <div class="plano-card rv">
-          <div class="plano-card__header">
-            <span class="plano-card__tag">Fundamental I</span>
-            <h3 class="plano-card__titulo">Anos Iniciais</h3>
-            <p class="plano-card__sub">1º ao 5º ano</p>
-          </div>
-          <div class="plano-card__preco">
-            <span class="plano-card__de">A partir de</span>
-            <div class="plano-card__valor">R$ <strong>79</strong><span>/mês</span></div>
-          </div>
-          <ul class="plano-card__lista">
-            <li>✓ Certificado MEC</li>
-            <li>✓ 100% Online — 24h</li>
-            <li>✓ Duração: 18 meses</li>
-            <li>✓ Material incluso</li>
-            <li>✓ Suporte via WhatsApp</li>
-          </ul>
-          <a href="#contato" class="botao botao--outline" style="width:100%;justify-content:center;">Quero este plano</a>
+      <div class="painel-planos rv">
+        <!-- Lado esquerdo: Seletor (Abas) -->
+        <div class="painel-planos__abas">
+          <button class="painel-planos__aba ativa" onclick="mudarPlano(0, this)">
+            <div class="painel-planos__aba-icone">1º</div>
+            <div class="painel-planos__aba-info">
+              <h4>Fundamental I</h4>
+              <p>Anos Iniciais · 1º ao 5º ano</p>
+            </div>
+          </button>
+          
+          <button class="painel-planos__aba" onclick="mudarPlano(1, this)">
+            <div class="painel-planos__aba-icone">6º</div>
+            <div class="painel-planos__aba-info">
+              <h4>Fundamental II</h4>
+              <p>Anos Finais · 6º ao 9º ano</p>
+            </div>
+          </button>
+          
+          <button class="painel-planos__aba" onclick="mudarPlano(2, this)">
+            <div class="painel-planos__aba-icone">EM</div>
+            <div class="painel-planos__aba-info">
+              <h4>Ensino Médio Completo</h4>
+              <p>Formação Geral · 1º ao 3º ano</p>
+            </div>
+            <span class="painel-planos__aba-destaque">Destaque</span>
+          </button>
+          
+          <button class="painel-planos__aba" onclick="mudarPlano(3, this)">
+            <div class="painel-planos__aba-icone">★</div>
+            <div class="painel-planos__aba-info">
+              <h4>Fundamental + Médio</h4>
+              <p>Formação Integral Completa</p>
+            </div>
+          </button>
         </div>
 
-        <!-- PLANO 2 (DESTAQUE) -->
-        <div class="plano-card plano-card--destaque rv rv-d1">
-          <div class="plano-card__ribbon">Mais Escolhido</div>
-          <div class="plano-card__header">
-            <span class="plano-card__tag">Ensino Médio</span>
-            <h3 class="plano-card__titulo">Completo</h3>
-            <p class="plano-card__sub">1º ao 3º ano</p>
+        <!-- Lado direito: Detalhes do Plano Selecionado -->
+        <div class="painel-planos__detalhes" id="detalhesPlano">
+          <div class="painel-planos__detalhes-header">
+            <span class="painel-planos__tag" id="planoTag">Ensino Fundamental I</span>
+            <h3 id="planoTitulo">Ensino Fundamental — Anos Iniciais</h3>
+            <p id="planoSub">Indicado para quem precisa concluir a alfabetização e as séries iniciais.</p>
           </div>
-          <div class="plano-card__preco">
-            <span class="plano-card__de">A partir de</span>
-            <div class="plano-card__valor">R$ <strong>89</strong><span>/mês</span></div>
+          
+          <div class="painel-planos__preco">
+            <span class="painel-planos__de">Investimento Mensal</span>
+            <div class="painel-planos__valor">
+              <span>R$</span> <strong id="planoPreco">79</strong> <span>/ mês</span>
+            </div>
+            <span class="painel-planos__parcelamento" id="planoParcelas">Início imediato após matrícula</span>
           </div>
-          <ul class="plano-card__lista">
-            <li>✓ Certificado MEC</li>
-            <li>✓ 100% Online — 24h</li>
-            <li>✓ Duração: 18 meses</li>
-            <li>✓ Material incluso</li>
-            <li>✓ Suporte prioritário</li>
-            <li>✓ Parcele em até 12x</li>
-          </ul>
-          <a href="#contato" class="botao botao--amarelo" style="width:100%;justify-content:center;">
-            Solicitar Matrícula
-            <svg class="botao-seta" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </a>
-        </div>
 
-        <!-- PLANO 3 -->
-        <div class="plano-card rv rv-d2">
-          <div class="plano-card__header">
-            <span class="plano-card__tag">Pacote Completo</span>
-            <h3 class="plano-card__titulo">Fundamental + Médio</h3>
-            <p class="plano-card__sub">Formação integral</p>
-          </div>
-          <div class="plano-card__preco">
-            <span class="plano-card__de">A partir de</span>
-            <div class="plano-card__valor">R$ <strong>149</strong><span>/mês</span></div>
-          </div>
-          <ul class="plano-card__lista">
-            <li>✓ Certificado MEC</li>
-            <li>✓ 100% Online — 24h</li>
-            <li>✓ Duração: 36 meses</li>
-            <li>✓ Material incluso</li>
-            <li>✓ Suporte via WhatsApp</li>
-            <li>✓ Melhor custo-benefício</li>
+          <ul class="painel-planos__beneficios" id="planoBeneficios">
+            <li>✓ Certificado válido reconhecido pelo MEC</li>
+            <li>✓ Aulas 100% online — Plataforma ativa 24h</li>
+            <li>✓ Todo o material de apoio em PDF incluso</li>
+            <li>✓ Duração recomendada: 18 meses</li>
+            <li>✓ Suporte pedagógico direto pelo WhatsApp</li>
           </ul>
-          <a href="#contato" class="botao botao--outline" style="width:100%;justify-content:center;">Quero este plano</a>
+
+          <div class="painel-planos__rodape">
+            <a href="#contato" class="botao botao--amarelo" style="width:100%; justify-content:center;">
+              Solicitar Matrícula
+              <svg class="botao-seta" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+            <div class="painel-planos__seguro">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Parceria com a Unigran · Validade Nacional</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
