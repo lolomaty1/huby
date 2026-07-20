@@ -1,25 +1,26 @@
 :root {
   --azul: #003BCB;
-  --azul-escuro: #091A44;
-  --azul-profundo: #050E26;
-  --amarelo: #E0B034; /* Ouro fosco elegante */
-  --amarelo-vivo: #F5C754;
+  --azul-escuro: #0A2540;
+  --azul-profundo: #051424;
+  --amarelo: #B89047; /* Dourado acadêmico de diploma */
+  --amarelo-vivo: #C5A880;
   --branco: #FFFFFF;
   --cinza-claro: #F8FAFC;
   --cinza: #64748B;
   --cinza-escuro: #334155;
-  --texto: #0F172A;
+  --texto: #1E293B;
   --borda: #E2E8F0;
   --borda-suave: rgba(226, 232, 240, 0.4);
 
-  --font-titulo: 'Plus Jakarta Sans', sans-serif;
+  --font-titulo: 'Playfair Display', Georgia, serif;
+  --font-subtitulo: 'Plus Jakarta Sans', sans-serif;
   --font-corpo: 'Inter', sans-serif;
 
-  --raio: 16px;
-  --raio-card: 20px;
-  --sombra: 0 10px 30px -10px rgba(9, 26, 68, 0.08);
-  --sombra-forte: 0 20px 40px -15px rgba(9, 26, 68, 0.15);
-  --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --raio: 12px;
+  --raio-card: 16px;
+  --sombra: 0 8px 30px rgba(10, 37, 64, 0.05);
+  --sombra-forte: 0 16px 40px rgba(10, 37, 64, 0.08);
+  --transicao: all 0.25s ease-in-out;
 }
 
 /* === RESET === */
@@ -38,9 +39,9 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
 .botao {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 16px 36px;
-  font-family: var(--font-titulo);
+  font-family: var(--font-subtitulo);
   font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
-  border-radius: 50px; transition: var(--transicao);
+  border-radius: 60px; transition: var(--transicao);
   position: relative; overflow: hidden;
   border: 1px solid transparent;
 }
@@ -114,7 +115,7 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
 .topo__logo img { height: 38px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
 .topo__logo span {
   display: inline-block; margin-left: 10px;
-  font-family: var(--font-titulo); font-size: 1.25rem; color: var(--branco);
+  font-family: var(--font-subtitulo); font-size: 1.25rem; color: var(--branco);
   font-weight: 800; vertical-align: middle;
 }
 .topo__logo span b { color: var(--amarelo); }
@@ -124,13 +125,14 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
   color: rgba(255,255,255,0.75); font-size: 0.8rem; font-weight: 600;
   padding: 8px 16px; border-radius: 50px; transition: var(--transicao);
   text-transform: uppercase; letter-spacing: 0.5px;
+  font-family: var(--font-subtitulo);
 }
 .topo__link:hover { color: var(--branco); background: rgba(255,255,255,0.06); }
 
 .topo__cta {
   margin-left: 16px; padding: 10px 26px;
   background: var(--amarelo); color: var(--azul-profundo);
-  font-family: var(--font-titulo); font-size: 0.78rem; font-weight: 700;
+  font-family: var(--font-subtitulo); font-size: 0.78rem; font-weight: 700;
   letter-spacing: 0.5px; text-transform: uppercase;
   border-radius: 50px; transition: var(--transicao);
   box-shadow: 0 4px 14px rgba(224, 176, 52, 0.25);
@@ -162,7 +164,7 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
 }
 .topo__mobile.ativo { display: flex; }
 .topo__mobile a {
-  color: var(--branco); font-family: var(--font-titulo);
+  color: var(--branco); font-family: var(--font-subtitulo);
   font-size: 1.05rem; font-weight: 600; padding: 12px 32px; border-radius: 8px;
   transition: var(--transicao); text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -205,8 +207,9 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
   font-weight: 800;
 }
 .heroi__titulo em {
-  font-style: normal; color: var(--amarelo);
+  font-style: italic; color: var(--amarelo);
   position: relative; display: inline-block;
+  font-family: var(--font-titulo);
 }
 .heroi__titulo em::after {
   content: ''; position: absolute; bottom: 4px; left: 0; right: 0;
@@ -224,7 +227,7 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
 .heroi__numeros { display: flex; gap: 40px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px; }
 .heroi__numero { text-align: left; }
 .heroi__numero strong {
-  display: block; font-family: var(--font-titulo);
+  display: block; font-family: var(--font-subtitulo);
   font-size: 2.2rem; color: var(--branco); line-height: 1; font-weight: 800;
 }
 .heroi__numero strong span { color: var(--amarelo); }
@@ -252,7 +255,7 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
    =========================================== */
 .faixa {
   position: relative; z-index: 5;
-  margin-top: -50px; padding-bottom: 20px;
+  margin-top: -40px; padding-bottom: 20px;
 }
 .faixa__grid {
   display: flex; gap: 0;
@@ -260,10 +263,10 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
   border-radius: var(--raio-card);
   box-shadow: var(--sombra-forte);
   overflow: hidden;
-  border: 1px solid var(--borda-suave);
+  border: 1px solid var(--borda);
 }
 .faixa__item {
-  flex: 1; padding: 24px 20px;
+  flex: 1; padding: 28px 24px;
   text-align: center;
   border-right: 1px solid var(--borda);
   transition: var(--transicao);
@@ -271,19 +274,17 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
 .faixa__item:last-child { border-right: none; }
 .faixa__item:hover { background: var(--cinza-claro); }
 
-.faixa__icone {
-  width: 50px; height: 50px; margin: 0 auto 12px;
-  border-radius: 12px; overflow: hidden;
+.faixa__icone-cred {
+  font-size: 1.8rem; margin-bottom: 12px;
+  display: block; line-height: 1;
 }
-.faixa__icone img { width: 100%; height: 100%; object-fit: contain; }
 
 .faixa__titulo {
-  font-family: var(--font-titulo); font-size: 0.8rem;
+  font-family: var(--font-subtitulo); font-size: 0.8rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.5px;
-  color: var(--azul-escuro); margin-bottom: 4px; font-weight: 700;
+  color: var(--azul-escuro); margin-bottom: 6px;
 }
-.faixa__texto { font-size: 0.72rem; color: var(--cinza); line-height: 1.4; }
-
+.faixa__texto { font-size: 0.72rem; color: var(--cinza); line-height: 1.5; }
 /* ===========================================
    SEÇÃO SOBRE — staggered layout
    =========================================== */
@@ -396,6 +397,48 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
 }
 .sobre__destaque h4 { font-size: 0.85rem; font-weight: 700; color: var(--texto); }
 .sobre__destaque p { font-size: 0.72rem; color: var(--cinza); margin-top: 2px; }
+
+/* ===========================================
+   JORNADA DE CONCLUSÃO — step-by-step
+   =========================================== */
+.jornada {
+  padding: 120px 0;
+  background: var(--branco);
+  border-top: 1px solid var(--borda);
+}
+.jornada__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.jornada__passo {
+  background: var(--cinza-claro);
+  padding: 32px 24px;
+  border-radius: var(--raio-card);
+  border: 1px solid var(--borda);
+  transition: var(--transicao);
+  position: relative;
+}
+.jornada__passo:hover {
+  background: var(--branco);
+  border-color: var(--amarelo);
+  box-shadow: var(--sombra-forte);
+  transform: translateY(-4px);
+}
+.jornada__numero-passo {
+  font-family: var(--font-subtitulo);
+  font-size: 2.2rem; font-weight: 800;
+  color: var(--amarelo); line-height: 1;
+  margin-bottom: 20px;
+}
+.jornada__passo h3 {
+  font-family: var(--font-subtitulo);
+  font-size: 0.95rem; font-weight: 800;
+  color: var(--azul-escuro); margin-bottom: 12px;
+}
+.jornada__passo p {
+  font-size: 0.78rem; color: var(--cinza); line-height: 1.6;
+}
 
 /* ===========================================
    EJA — full-bleed dark
@@ -1169,6 +1212,13 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
   .heroi__acoes, .heroi__numeros { justify-content: center; }
   .heroi__visual { max-width: 520px; margin: 0 auto; }
   
+  /* Faixa tablet */
+  .faixa__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .faixa__item { border-right: none; }
+
+  /* Jornada tablet */
+  .jornada__grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+
   /* Painel de Planos tablet */
   .painel-planos { grid-template-columns: 1fr; gap: 24px; }
   .painel-planos__abas { flex-direction: row; flex-wrap: wrap; }
@@ -1193,6 +1243,15 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
   .heroi__desc { font-size: 0.95rem; }
   .heroi__visual { max-width: 400px; }
 
+  /* Faixa mobile */
+  .faixa__grid { flex-direction: column; gap: 0; }
+  .faixa__item { border-right: none; border-bottom: 1px solid var(--borda); padding: 20px 24px; text-align: left; display: flex; align-items: center; gap: 16px; }
+  .faixa__item:last-child { border-bottom: none; }
+  .faixa__icone-cred { margin: 0; min-width: 32px; font-size: 1.5rem; text-align: center; }
+
+  /* Jornada mobile */
+  .jornada__grid { grid-template-columns: 1fr; gap: 16px; }
+
   /* Painel de Planos mobile */
   .painel-planos__abas {
     flex-direction: row;
@@ -1212,21 +1271,12 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
   .painel-planos__aba.ativa::before { left: 0; right: 0; bottom: -1px; top: auto; height: 3px; width: auto; border-radius: 4px 4px 0 0; }
   .painel-planos__detalhes { padding: 32px 24px; }
   .painel-planos__valor strong { font-size: 2.8rem; }
-
-  /* Faixa mobile */
-  .faixa__grid { flex-direction: column; }
-  .faixa__item { border-right: none; border-bottom: 1px solid var(--borda); padding: 20px 24px; text-align: left; display: flex; align-items: center; gap: 16px; }
-  .faixa__item:last-child { border-bottom: none; }
-  .faixa__icone { margin: 0; min-width: 48px; width: 48px; height: 48px; }
-
   /* Sobre mobile */
   .sobre__destaques { grid-template-columns: 1fr; }
   .sobre__card-numeros { grid-template-columns: 1fr 1fr; }
 
   /* Planos mobile */
-  .planos__grid, .depoimentos__grid { grid-template-columns: 1fr; }
-  .plano-card--destaque { transform: none; }
-  .plano-card { max-width: 100%; }
+  .depoimentos__grid { grid-template-columns: 1fr; }
 
   /* Videos mobile */
   .videos__grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }

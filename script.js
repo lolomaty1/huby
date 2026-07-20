@@ -185,58 +185,58 @@ if (videoModal) {
 const planosDados = [
   {
     tag: "Ensino Fundamental I",
-    titulo: "Ensino Fundamental — Anos Iniciais",
-    sub: "Ideal para quem precisa concluir a alfabetização e as séries iniciais (1º ao 5º ano).",
-    preco: "79",
-    parcelas: "Início imediato após matrícula",
+    titulo: "Ensino Fundamental — Séries Iniciais",
+    sub: "Autorização CEE/MS. Indicado para quem precisa concluir a alfabetização e as séries iniciais (1º ao 5º ano).",
+    preco: "79,00",
+    parcelas: "Valor correspondente à parcela mensal de ensino",
     beneficios: [
-      "✓ Certificado válido reconhecido pelo MEC",
-      "✓ Aulas 100% online — Plataforma ativa 24h",
-      "✓ Todo o material de apoio em PDF incluso",
-      "✓ Duração recomendada: 18 meses",
-      "✓ Suporte pedagógico direto pelo WhatsApp"
+      "✓ Diploma oficial autorizado pela SED/MS com validade nacional",
+      "✓ Plataforma de estudos EAD ativa 24h por dia",
+      "✓ Todo o material didático em PDF digital incluso",
+      "✓ Provas presenciais agendadas no polo de apoio",
+      "✓ Suporte e acompanhamento pedagógico via WhatsApp"
     ]
   },
   {
     tag: "Ensino Fundamental II",
-    titulo: "Ensino Fundamental — Anos Finais",
-    sub: "Focado na conclusão do 6º ao 9º ano com apostilas simplificadas.",
-    preco: "79",
-    parcelas: "Duração acelerada e flexível",
+    titulo: "Ensino Fundamental — Séries Finais",
+    sub: "Autorização CEE/MS. Focado na conclusão acelerada do 6º ao 9º ano em ambiente virtual.",
+    preco: "79,00",
+    parcelas: "Valor correspondente à parcela mensal de ensino",
     beneficios: [
-      "✓ Certificado válido reconhecido pelo MEC",
-      "✓ Estude de onde quiser pelo celular ou PC",
-      "✓ Tutoria online para esclarecer dúvidas",
-      "✓ Sem taxas ocultas de matrícula ou provas",
-      "✓ Exercícios preparatórios inclusos"
+      "✓ Diploma oficial autorizado pela SED/MS com validade nacional",
+      "✓ Estudo flexível pelo computador, tablet ou celular",
+      "✓ Provas de conformidade obrigatórias aplicadas no polo",
+      "✓ Sem cobranças de taxas de matrícula ou material",
+      "✓ Grade curricular alinhada com as diretrizes do CEE"
     ]
   },
   {
     tag: "Ensino Médio Completo",
     titulo: "Ensino Médio Completo (1º ao 3º ano)",
-    sub: "O plano mais buscado. Perfeito para quem busca aprovação rápida e ingresso em faculdades.",
-    preco: "89",
-    parcelas: "Duração recomendada: 18 meses",
+    sub: "Autorização CEE/MS. Homologado para aprovação e ingresso em universidades e concursos públicos.",
+    preco: "89,00",
+    parcelas: "Valor correspondente à parcela mensal de ensino",
     beneficios: [
-      "✓ Certificado registrado e reconhecido pelo MEC",
-      "✓ Parceria com a Unigran e validade nacional",
-      "✓ Aulas gravadas acessíveis a qualquer momento",
-      "✓ Suporte pedagógico direto no WhatsApp",
-      "✓ Aproveitamento de estudos anteriores"
+      "✓ Diploma oficial autorizado pela SED/MS com validade nacional",
+      "✓ Registro formal de conclusão publicado em Diário Oficial",
+      "✓ Parceria com a Unigran Educacional",
+      "✓ Provas presenciais obrigatórias nos termos da LDB 9.394/96",
+      "✓ Aproveitamento legal de disciplinas concluídas anteriormente"
     ]
   },
   {
     tag: "Fundamental + Médio",
-    titulo: "Combo: Fundamental + Médio Completo",
-    sub: "Formação integral acelerada para quem precisa do diploma do ensino básico completo.",
-    preco: "149",
-    parcelas: "Melhor custo-benefício por mês",
+    titulo: "Matrícula Integrada: Fundamental + Médio",
+    sub: "Autorização CEE/MS. Formação básica integrada e acelerada para conclusão total dos estudos.",
+    preco: "149,00",
+    parcelas: "Custo-benefício otimizado para dupla certificação",
     beneficios: [
-      "✓ Certificados válidos e registrados pelo MEC",
-      "✓ Acesso total e ilimitado a todas as disciplinas",
-      "✓ Economia significativa nas mensalidades combinadas",
-      "✓ Suporte prioritário com coordenadores",
-      "✓ Conclusão flexível no seu tempo"
+      "✓ Diplomas oficiais autorizados com validade nacional",
+      "✓ Acesso unificado a todas as disciplinas da grade EAD",
+      "✓ Isenção de taxa de material didático e suporte",
+      "✓ Provas agendadas presencialmente no polo credenciado",
+      "✓ Conclusão ágil respeitando o tempo de aprendizado do aluno"
     ]
   }
 ];
