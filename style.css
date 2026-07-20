@@ -189,66 +189,84 @@ button { cursor: pointer; border: none; font-family: inherit; transition: var(--
 }
 .heroi .wrap {
   position: relative; z-index: 2;
-  display: grid; grid-template-columns: 1fr 1.25fr; gap: 60px; align-items: center;
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 48px;
+}
+
+.heroi__centralizado {
+  max-width: 820px;
+  display: flex; flex-direction: column; align-items: center;
 }
 
 .heroi__tag {
   display: inline-block;
-  padding: 6px 16px; margin-bottom: 24px;
-  background: rgba(224, 176, 52, 0.1); border: 1px solid rgba(224, 176, 52, 0.2);
+  padding: 6px 18px; margin-bottom: 24px;
+  background: rgba(184, 144, 71, 0.1); border: 1px solid rgba(184, 144, 71, 0.2);
   border-radius: 50px; color: var(--amarelo-vivo);
-  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+  font-family: var(--font-subtitulo);
 }
 
 .heroi__titulo {
   font-family: var(--font-titulo);
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
   color: var(--branco); line-height: 1.15; margin-bottom: 24px;
   font-weight: 800;
 }
 .heroi__titulo em {
   font-style: italic; color: var(--amarelo);
   position: relative; display: inline-block;
-  font-family: var(--font-titulo);
 }
 .heroi__titulo em::after {
   content: ''; position: absolute; bottom: 4px; left: 0; right: 0;
-  height: 4px; background: var(--amarelo); opacity: 0.4;
+  height: 4px; background: var(--amarelo); opacity: 0.3;
   border-radius: 2px;
 }
 
 .heroi__desc {
-  font-size: 1.05rem; color: rgba(255,255,255,0.7);
-  max-width: 480px; margin-bottom: 36px; line-height: 1.7;
+  font-size: 1.15rem; color: rgba(255,255,255,0.7);
+  max-width: 680px; margin-bottom: 32px; line-height: 1.7;
 }
 
-.heroi__acoes { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 48px; }
-
-.heroi__numeros { display: flex; gap: 40px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px; }
-.heroi__numero { text-align: left; }
-.heroi__numero strong {
-  display: block; font-family: var(--font-subtitulo);
-  font-size: 2.2rem; color: var(--branco); line-height: 1; font-weight: 800;
+/* Checklist of certificates in hero */
+.heroi__certificados {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 36px;
+  list-style: none;
 }
-.heroi__numero strong span { color: var(--amarelo); }
-.heroi__numero small { font-size: 0.75rem; color: rgba(255,255,255,0.45); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.heroi__certificados li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: var(--font-subtitulo);
+}
+.heroi__certificados li svg {
+  color: var(--amarelo);
+  flex-shrink: 0;
+}
 
-/* Hero visual — brand image */
-.heroi__visual {
+.heroi__acoes { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+
+/* Large horizontal banner wrapper */
+.heroi__visual-horizontal {
   position: relative;
+  width: 100%;
+  max-width: 980px;
   border-radius: var(--raio-card);
-  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(184, 144, 71, 0.25);
   transition: var(--transicao);
 }
-.heroi__visual img {
-  border-radius: 16px;
+.heroi__visual-horizontal img {
   width: 100%; height: auto;
   display: block;
 }
-.heroi__visual::before { display: none; }
-.heroi__visual::after { display: none; }
 
 /* ===========================================
    FAIXA DE BENEFÍCIOS — horizontal ribbon
